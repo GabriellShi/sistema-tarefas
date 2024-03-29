@@ -468,6 +468,9 @@ footer a:hover {
   display: inline-block;
   width: 70%;
   justify-content: center;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
 }
 
 .sect-1-create ul li div input {
