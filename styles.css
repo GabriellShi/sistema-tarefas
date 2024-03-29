@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "monica-ext-font_YIBBBFG";
+}
+
+/* ------------------------------------------------------------ESTILIZAÇÃO INDEX -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.header-index {
+  text-align: center;
+  padding: 0.3rem 0rem;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: end;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+.header-index li {
+  list-style-type: none;
+}
+
+.header-index a {
+  background-color: black;
+}
+
+.header-index a:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.header-index h1 {
+  margin-right: 30rem;
+}
+
+.body-index {
+  font-size: 1.1rem;
+}
+
+.sec-1-index-father {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 10px 5px;
+}
+
+.sect-1-index-son-left {
+  width: 70%;
+}
+
+.titulo-sect-1-index h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.sect-1-index-son-left ol li {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.sect-1-index-son-left ol li div {
+  border: 2px solid black;
+  width: 40%;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.sect-1-index-son-left ol li h4 {
+  font-size: 1.3rem;
+}
+
+.sect-1-index-son-right {
+  text-align: end;
+  margin-right: 0.5rem;
+}
+
+.sect-1-index-grandSon1 {
+  display: inline-block;
+}
+
+.sect-1-index-grandSon1 div {
+  height: 10rem;
+  width: 10rem;
+  background-color: blue;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  border: 3px solid black;
+}
+
+.sect-1-index-grandSon1-1 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sect-1-index-grandSon2 {
+  display: flex;
+  justify-content: end;
+}
+
+.sect-1-index-grandSon2 {
+  vertical-align: bottom;
+}
+.sect-1-index-grandSon2 div {
+  height: 5rem;
+  width: 5rem;
+  font-size: 1.5rem;
+  background-color: rgb(11, 255, 11);
+  color: white;
+}
+
+.sect-1-index-grandSon2 h3 {
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.sect-1-index-grandSon2 h4 {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-2-index-father {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 20px;
+  list-style-type: none;
+}
+
+.sec-2-index-father li {
+  list-style-type: none;
+  display: flex;
+}
+
+.sec-2-index-father h2 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 7px 0px;
+}
+
+.sec-2-index-father h4 {
+  width: 80%;
+  border: 2px solid black;
+  margin: 15px 25px;
+  padding: 10px;
+  border-radius: 0px 20px 0px 0px;
+}
+
+.sect-2-index-grandSon1 {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.sect-2-index-grandSon1 {
+  width: 60%;
+}
+
+.sect-2-index-grandSon1 a {
+  border: 2px solid black;
+  margin: 15px 25px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sect-2-index-grandSon1 {
+  background-color: rgb(56, 52, 52);
+}
+
+.sect-2-index-grandSon1 h4 {
+  background-color: rgb(255, 0, 0);
+}
+
+.sect-2-index-grandSon1 a {
+  background-color: rgb(255, 0, 0);
+}
+
+.sect-2-index-grandSon1 a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.sect-2-index-grandSon2 {
+  background-color: rgb(54, 56, 52);
+}
+
+.sect-2-index-grandSon2 h4,
+a {
+  background-color: rgb(0, 255, 60);
+}
+
+.sect-2-index-grandSon2 a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.sect-2-index-grandSon2 {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.sect-2-index-grandSon2 a {
+  border: 2px solid black;
+  margin: 15px 25px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sect-2-index-grandSon2 h4 {
+  margin-right: 0;
+}
+
+.sect-2-index-grandSon2 li {
+  font-size: 0.8rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 4rem;
+  padding-top: 1.4rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  background-color: black;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+footer a:hover {
+  color: blue;
+}
+
+/* ------------------------------------------------------------ESTILIZAÇÃO INDEX - RESPONSIVIDADE ----------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1140px) {
+  .body-index {
+    font-size: 0.9rem;
+  }
+
+  .sect-2-index-grandSon1 {
+    width: 50%;
+  }
+
+  .sect-2-index-grandSon1 h4 {
+    margin-right: 0;
+  }
+
+  .sect-2-index-grandSon1 {
+    margin-right: 2rem;
+  }
+
+  .sec-2-index-father {
+    margin: 30px 10px;
+    justify-content: space-around;
+  }
+
+  .sect-1-index-son-left {
+    width: 65%;
+  }
+
+  .sect-1-index-son-left ol li div {
+    width: 50%;
+    margin-left: 0.5rem;
+  }
+
+  .titulo-sect-1-index h2 {
+    margin: 20px 10px;
+    color: white;
+  }
+
+  .sect-2-index-grandSon2 h4 {
+    text-align: center;
+  }
+
+  .sect-2-index-grandSon2 a {
+    margin: 10px 15px;
+  }
+
+  .sect-2-index-grandSon1 a {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 867px) {
+  .sect-2-index-grandSon1 {
+    width: 50%;
+  }
+
+  .sect-2-index-grandSon2 {
+    width: 50%;
+  }
+
+  .header-index h1 {
+    margin-right: 10rem;
+  }
+}
+
+@media (max-width: 646px) {
+  .sec-2-index-father {
+    display: block;
+  }
+
+  .sect-2-index-grandSon1 {
+    width: 100%;
+  }
+
+  .sect-2-index-grandSon2 {
+    width: 100%;
+  }
+
+  .sect-2-index-grandSon1 {
+    margin-bottom: 2rem;
+  }
+
+  .sect-1-index-son-left ol li {
+    display: block;
+  }
+
+  .sect-1-index-son-left ol li h4 {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .sect-1-index-son-left ol li div {
+    width: 80%;
+  }
+}
+
+@media (max-width: 426px) {
+  .sect-1-index-son-left ol li div {
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  .sect-1-index-son-left ol li div {
+    margin-left: 2rem;
+  }
+
+  .sect-1-index-son-right {
+    margin-right: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
