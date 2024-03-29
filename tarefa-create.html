@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Criação de Tarefa</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<header class="header-create">
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header class="header-create">
     <ul>
-<!-- botão de voltar ao inicio -->
-        <li><img width="10%" src="https://img.freepik.com/vetores-premium/3d-pagina-inicial-base-pagina-principal-casa-icone-emblema-simbolo-sinal-para-ui-ux-mobile-app-websi_659151-1857.jpg" alt="icone-home"></li>
-<!-- Titulo da Pagina -->
-        <li><h1>CRIAÇÃO DE CONTEUDO</h1></li>
-<!-- botão que abre a opção dos tipos de criador de tarefas  -->
-        <li><img width="10%" src="https://thumbs.dreamstime.com/b/%C3%ADcone-de-quatro-quadrados-elemento-do-minimalistic-para-apps-m%C3%B3veis-conceito-e-da-web-sinais-site-w-cole%C3%A7%C3%A3o-dos-s%C3%ADmbolos-114740234.jpg" alt="icone-categoria"></li>
+      <!-- botão de voltar ao inicio -->
+      <li>
+        <a href="index.html"
+          ><img width="10%" src="/img/home.png" alt="icone-home"
+        /></a>
+      </li>
+      <!-- Titulo da Pagina -->
+      <li><h1>CRIAÇÃO DE CONTEUDO</h1></li>
+      <!-- botão que abre a opção dos tipos de criador de tarefas  -->
+      <li>
+        <img width="10%" src="/img/categoria.png" alt="icone-categoria" />
+      </li>
     </ul>
-</header>
-<body class="body-create">
-<!-- Formulario de criação de Tarefas  -->
+  </header>
+  <body class="body-create">
+    <!-- Formulario de criação de Tarefas  -->
     <form action="">
-<section class="sect-1-create">
-    <ul>
-<!-- Campo onde vai o nome da Tarefa -->
-        <li>
+
+    <section class="sect-1-pai-create">
+      <section class="sect-1-create">
+        <ul>
+          <!-- Campo onde vai o nome da Tarefa -->
+          <li>
             <div>
-                <label for="name-tarefa">Nome da Tarefa</label>
-                <input type="text" name="name-tarefa" placeholder="Nome da Tarefa">
+              <label for="name-tarefa">Nome da Tarefa</label>
+              <input
+                type="text"
+                name="name-tarefa"
+                placeholder="Nome da Tarefa"
+              />
             </div>
-        </li>
-<!-- Campo onde vai a Data da tarefa e o Tempo da tarefa  -->
-        <li>
+          </li>
+          <!-- Campo onde vai a Data da tarefa e o Tempo da tarefa  -->
+          <li>
             <div class="input-data-time">
-                <section>
-                    <div class="data1">
-                        <label for="data-tarefa">Data</label>
-                        <input type="date" name="data-tarefa" placeholder="Data da Tarefa">
-                    </div>
-                    <div class="time1">
-                         <label for="tempo-tarefa">Tempo</label>
-                        <input type="time" name="tempo-tarefa" placeholder="Tempo da Tarefa">
-                    </div>
-                </section>
+              <section>
+                <div class="data1">
+                  <label for="data-tarefa">Data</label>
+                  <input
+                    type="date"
+                    name="data-tarefa"
+                    placeholder="Data da Tarefa"
+                  />
+                </div>
+                <div class="time1">
+                  <label for="tempo-tarefa">Tempo</label>
+                  <input
+                    type="time"
+                    name="tempo-tarefa"
+                    placeholder="Tempo da Tarefa"
+                  />
+                </div>
+              </section>
             </div>
-        </li>
-<!-- Campo onde vai as obervações relacionadas a essa tarefa  -->
-        <li>
+          </li>
+          <!-- Campo onde vai as obervações relacionadas a essa tarefa  -->
+          <li>
             <div class="obs-tarefa">
-                <div><label for="obd-tarefa">Observação da Tarefa</label></div>
-                <div><textarea name="obd-tarefa" placeholder="Observação da Tarefa" rows="7" cols="65"></textarea></div>
+              <div><label for="obd-tarefa">Observação da Tarefa</label></div>
+              <div>
+                <textarea
+                  name="obd-tarefa"
+                  placeholder="Observação da Tarefa"
+                  rows="7"
+                  cols="65"
+                ></textarea>
+              </div>
             </div>
-        </li>
-    </ul>
-</section>
+          </li>
+        </ul>
 
-<section class="sect-2-create">
-<!-- Seção onde ira selecionar a Prioridade da tarefa, entre Normal, Alto, Urgente e Pode Esperar  -->
-    <ol>
+       
+      </section>
 
+      <section class="sect-2-create">
+        <!-- Seção onde ira selecionar a Prioridade da tarefa, entre Normal, Alto, Urgente e Pode Esperar  -->
+        <ol>
+            <select name="prioridade" >
+                <option value="" disabled selected style="display: none;">Prioridade</option>
+            
+                <option value="podeEsperar" style="background-color: blue;">Pode Esperar</option>
+                <option value="normal" style="background-color: gray;">Normal</option>
+                <option value="alto" style="background-color: orange;">Alto</option>
+                <option value="urgente" style="background-color: red;">Urgente</option>
+            </select>
+        </ol>
 
-        <select name="prioridade"> <option value="" disabled selected>Prioridade</option>
-            <option value="normal">Normal</option> <option value="alto">Alto</option> 
-            <option value="urgente">Urgente</option> <option value="podeEsperar">Pode Esperar</option>
+        <!-- Seleção se sera uma tarefa recorrente ou não -->
+        <ol>
+          <select name="recorrentes">
+            <option value="" disabled selected style="display: none;">Recorrente?</option>
+            <option value="sim" style="background-color: gray;">SIM</option>
+            <option value="nao" style="background-color: gray;">NÃO</option>
           </select>
+        </ol>
+      </section>
+      
+    </section>
 
-          
-        <h3>Prioridade</h3>
-        <li>
-<img width="8%" src="https://img.freepik.com/vetores-premium/conjunto-de-icones-de-alta-prioridade-media-baixa-simbolos-diversos-isolados-em-ilustracao-vetorial-de-fundo-branco_476325-797.jpg" alt="Prioridade Normal">            
-            <h4>Normal - cinza</h4>
-        </li>
-        <li>
-            <img width="8%" src="https://img.freepik.com/vetores-premium/conjunto-de-icones-de-alta-prioridade-media-baixa-simbolos-diversos-isolados-em-ilustracao-vetorial-de-fundo-branco_476325-797.jpg" alt="Prioridade Alto">
-            <h4>Alto - laranja</h4>
-        </li>
-        <li>
-            <img width="8%" src="https://img.freepik.com/vetores-premium/conjunto-de-icones-de-alta-prioridade-media-baixa-simbolos-diversos-isolados-em-ilustracao-vetorial-de-fundo-branco_476325-797.jpg" alt="Prioridade Urgente">
-            <h4>Urgente - Vermelho</h4>
-        </li>
-        <li>
-            <img width="8%" src="https://img.freepik.com/vetores-premium/conjunto-de-icones-de-alta-prioridade-media-baixa-simbolos-diversos-isolados-em-ilustracao-vetorial-de-fundo-branco_476325-797.jpg" alt="Prioridade Pode Esperar">
-            <h4>Pode Esperar - Azul</h4>
-        </li>
-    </ol>
-
-<!-- Seleção se sera uma tarefa recorrente ou não -->
-<div>
-    <select name="recorrentes"> <option value="" disabled selected>Tarefa Recorrente?</option>
-        <option value="sim">SIM</option> <option value="nao">NÃO</option> 
-      </select>
-</div>
-</section> 
-
+     
     </form>
-</body>
+  </body>
 </html>

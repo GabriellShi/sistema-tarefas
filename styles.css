@@ -1,4 +1,3 @@
-
 /* Definição de zeramento das margens e pneding geral e formatação da fonte  */
 * {
   box-sizing: border-box;
@@ -41,13 +40,11 @@
   margin-right: 30rem;
 }
 
-
 /* Estilização do Body  */
 .body-index {
   font-size: 1.1rem;
   background-color: white;
 }
-
 
 /* Estilização da section 1 do index  */
 .sec-1-index-father {
@@ -142,7 +139,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 /* Estilização da section 2 do index  */
 .sec-2-index-father {
@@ -245,7 +241,6 @@ a {
 .sect-2-index-grandSon2 li {
   font-size: 0.8rem;
 }
-
 
 /* Estilização do footer  */
 footer {
@@ -403,6 +398,13 @@ footer a:hover {
   text-align: center;
   align-items: center;
   margin-bottom: 2rem;
+  padding: 5px 0px;
+  background-color: black;
+  color: white;
+}
+
+.header-create ul li a {
+  background-color: transparent;
 }
 
 .header-create ul li {
@@ -417,7 +419,7 @@ footer a:hover {
 /* Estilização do Body Create Tarefa  */
 
 .body-create form {
-  width: 80%;
+  width: 70%;
   height: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -426,14 +428,25 @@ footer a:hover {
   font-size: 100%;
 }
 
+.body-create {
+  background-image: url(img/background.jpg) ;
+  background-size: 100% auto;
+}
 
 /* Estilização da section 1 da pagina create  */
-.sect-1-create {
-  width: 80%;
-  background-color: aqua;
-  border-radius: 20px;
-  border: 2px solid black;
+
+.sect-1-pai-create {
+  background-color: rgba(0, 0, 0, 0.594); /* Cor azul com opacidade de 0.5 */
+  border-radius: 5px;
   padding: 1rem;
+  width: 100%;
+  
+}
+
+
+.sect-1-create {
+  color: white;
+  width: 100%;
 }
 
 .sect-1-create label {
@@ -454,6 +467,8 @@ footer a:hover {
 .sect-1-create ul li div input {
   width: 100%;
   height: 30px;
+  border-radius: 5px;
+  border: 0;
 }
 
 .input-data-time section {
@@ -473,22 +488,128 @@ footer a:hover {
   width: 10%;
 }
 
-
-
-/* Estilização de section 2 da pagina create  */
-.sect-2-create  {
-  width: 20%;
-}
-.sect-2-create li {
-  list-style-type: none;
-}
-
 .obs-tarefa {
   display: block;
 }
 
-
 .obs-tarefa textarea {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
+  border: 0;
+}
+
+
+/* Estilização de section 2 da pagina create  */
+.sect-2-create {
+  width: 100%;
+  display: flex;
+  margin: 30px 10px 10px 10px;
+  justify-content:space-evenly;
+}
+
+
+
+
+.sect-2-create ol select {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 130px;
+  border: 2px solid black;
+  border-radius: 7px;
+
+}
+
+.sect-2-create ol select option {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+@media (max-width: 830px) {
+  .header-create ul li h1 {
+    font-size: 1rem;
+  }
+
+  .body-create form {
+    width: 80%;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sect-1-pai-create {
+    width: 100%;
+  }
+}
+
+@media (max-width: 695px) {
+
+  .header-create ul {
+    margin-bottom: 10px;
+  }
+
+  .header-create ul li h1 {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+
+  .body-create form {
+    height: 480px;
+  }
+
+
+  .sect-1-create ul li div {
+    width: 100%;
+  }
+
+
+  .obs-tarefa textarea {
+    height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-create ul li img {
+    width: 15%;
+  }
+}
+
+@media (max-width: 395px) {
+  .sect-2-create { 
+    display: block;
+  }
+
+  .body-create form {
+    height: 600px;
+  }
+
+  .sect-2-create ol select {
+    margin-bottom: 150px;
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .sect-2-create {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+  @media (max-width: 270px) {
+    .input-data-time section {
+      display: block;
+    }
+
+    .sect-1-create ul li div {
+      margin-left: 0;
+    }
+
+
+
 }
