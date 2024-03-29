@@ -29,6 +29,7 @@
 
 .header-index a {
   background-color: black;
+  color: white;
 }
 
 .header-index a:hover {
@@ -42,12 +43,15 @@
 
 /* Estilização do Body  */
 .body-index {
+  background-image: url(img/background.jpg) ;
+  background-size: 100% auto;
   font-size: 1.1rem;
   background-color: white;
 }
 
 /* Estilização da section 1 do index  */
 .sec-1-index-father {
+  color: white;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -64,6 +68,7 @@
   margin-bottom: 1rem;
   background-color: blue;
   border-radius: 10px;
+  color: white;
 }
 
 .sect-1-index-son-left ol li {
