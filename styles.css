@@ -1,3 +1,5 @@
+
+/* Definição de zeramento das margens e pneding geral e formatação da fonte  */
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -9,6 +11,7 @@
 /* ------------------------------------------------------------ESTILIZAÇÃO INDEX -------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Estilização do Header  */
 .header-index {
   text-align: center;
   padding: 0.3rem 0rem;
@@ -38,11 +41,15 @@
   margin-right: 30rem;
 }
 
+
+/* Estilização do Body  */
 .body-index {
   font-size: 1.1rem;
   background-color: white;
 }
 
+
+/* Estilização da section 1 do index  */
 .sec-1-index-father {
   margin: auto;
   display: flex;
@@ -136,6 +143,8 @@
   justify-content: center;
 }
 
+
+/* Estilização da section 2 do index  */
 .sec-2-index-father {
   display: flex;
   justify-content: space-between;
@@ -237,6 +246,8 @@ a {
   font-size: 0.8rem;
 }
 
+
+/* Estilização do footer  */
 footer {
   background-color: black;
   color: white;
@@ -380,3 +391,104 @@ footer a:hover {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------ESTILIZAÇÃO DO TAREFAS CREATE --------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilização do Header Create Tarefa  */
+.header-create ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-create ul li {
+  list-style-type: none;
+  width: 100%;
+}
+
+.header-create ul li h1 {
+  font-size: 1.5rem;
+}
+
+/* Estilização do Body Create Tarefa  */
+
+.body-create form {
+  width: 80%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: center;
+  font-size: 100%;
+}
+
+
+/* Estilização da section 1 da pagina create  */
+.sect-1-create {
+  width: 80%;
+  background-color: aqua;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.sect-1-create label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.sect-1-create ul li {
+  list-style-type: none;
+}
+
+.sect-1-create ul li div {
+  display: inline-block;
+  width: 70%;
+  justify-content: center;
+}
+
+.sect-1-create ul li div input {
+  width: 100%;
+  height: 30px;
+}
+
+.input-data-time section {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.data1 {
+  margin-right: 0.5rem;
+}
+
+.time1 {
+  margin-left: 0.5rem;
+}
+
+.input-data-time section div input {
+  width: 10%;
+}
+
+
+
+/* Estilização de section 2 da pagina create  */
+.sect-2-create  {
+  width: 20%;
+}
+.sect-2-create li {
+  list-style-type: none;
+}
+
+.obs-tarefa {
+  display: block;
+}
+
+
+.obs-tarefa textarea {
+  margin-left: auto;
+  margin-right: auto;
+}

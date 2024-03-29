@@ -6,7 +6,7 @@
     <title>Criação de Tarefa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<header>
+<header class="header-create">
 
     <ul>
 <!-- botão de voltar ao inicio -->
@@ -17,34 +17,44 @@
         <li><img width="10%" src="https://thumbs.dreamstime.com/b/%C3%ADcone-de-quatro-quadrados-elemento-do-minimalistic-para-apps-m%C3%B3veis-conceito-e-da-web-sinais-site-w-cole%C3%A7%C3%A3o-dos-s%C3%ADmbolos-114740234.jpg" alt="icone-categoria"></li>
     </ul>
 </header>
-<body>
+<body class="body-create">
 <!-- Formulario de criação de Tarefas  -->
     <form action="">
-<section>
+<section class="sect-1-create">
     <ul>
 <!-- Campo onde vai o nome da Tarefa -->
         <li>
-            <label for="name-tarefa">Nome da Tarefa</label>
-            <input type="text" name="name-tarefa" placeholder="Nome da Tarefa">
+            <div>
+                <label for="name-tarefa">Nome da Tarefa</label>
+                <input type="text" name="name-tarefa" placeholder="Nome da Tarefa">
+            </div>
         </li>
 <!-- Campo onde vai a Data da tarefa e o Tempo da tarefa  -->
         <li>
-            <div>
-            <label for="data-tarefa">Data da Tarefa</label>
-            <input type="text" name="data-tarefa" placeholder="Data da Tarefa">
-            <label for="tempo-tarefa">Tempo da Tarefa</label>
-            <input type="text" name="tempo-tarefa" placeholder="Tempo da Tarefa">
+            <div class="input-data-time">
+                <section>
+                    <div class="data1">
+                        <label for="data-tarefa">Data</label>
+                        <input type="date" name="data-tarefa" placeholder="Data da Tarefa">
+                    </div>
+                    <div class="time1">
+                         <label for="tempo-tarefa">Tempo</label>
+                        <input type="time" name="tempo-tarefa" placeholder="Tempo da Tarefa">
+                    </div>
+                </section>
             </div>
         </li>
 <!-- Campo onde vai as obervações relacionadas a essa tarefa  -->
         <li>
-            <label for="obd-tarefa">Observação da Tarefa</label>
-            <input type="text" name="obd-tarefa" placeholder="Observação da Tarefa">
+            <div class="obs-tarefa">
+                <div><label for="obd-tarefa">Observação da Tarefa</label></div>
+                <div><textarea name="obd-tarefa" placeholder="Observação da Tarefa" rows="7" cols="65"></textarea></div>
+            </div>
         </li>
     </ul>
 </section>
 
-<section>
+<section class="sect-2-create">
 <!-- Seção onde ira selecionar a Prioridade da tarefa, entre Normal, Alto, Urgente e Pode Esperar  -->
     <ol>
 
