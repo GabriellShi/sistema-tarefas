@@ -43,7 +43,7 @@
 
 /* Estilização do Body  */
 .body-index {
-  background-image: url(img/background.jpg) ;
+  background-image: url(img/background.jpg);
   background-size: 100% auto;
   font-size: 1.1rem;
   background-color: white;
@@ -397,7 +397,6 @@ footer a:hover {
 /* Estilização do Header Create Tarefa  */
 .header-create ul {
   width: 100%;
-  height: 2.2rem;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -434,7 +433,7 @@ footer a:hover {
 }
 
 .body-create {
-  background-image: url(img/background.jpg) ;
+  background-image: url(img/background.jpg);
   background-size: 100% auto;
 }
 
@@ -445,9 +444,7 @@ footer a:hover {
   border-radius: 5px;
   padding: 1rem;
   width: 100%;
-  
 }
-
 
 .sect-1-create {
   color: white;
@@ -505,17 +502,13 @@ footer a:hover {
   border: 0;
 }
 
-
 /* Estilização de section 2 da pagina create  */
 .sect-2-create {
   width: 100%;
   display: flex;
   margin: 30px 10px 10px 10px;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
-
-
-
 
 .sect-2-create ol select {
   font-size: 1.2rem;
@@ -525,7 +518,6 @@ footer a:hover {
   margin-bottom: 130px;
   border: 2px solid black;
   border-radius: 7px;
-
 }
 
 .sect-2-create ol select option {
@@ -533,14 +525,16 @@ footer a:hover {
   text-align: center;
 }
 
-
 /* ------------------------------------------------------------ESTILIZAÇÃO DO TAREFAS CREATE RESPONSIVE --------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-
 @media (max-width: 830px) {
   .header-create ul li h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .header-create ul {
+    height: 3rem;
   }
 
   .body-create form {
@@ -557,23 +551,18 @@ footer a:hover {
 }
 
 @media (max-width: 695px) {
-
   .header-create ul {
     margin-bottom: 10px;
   }
 
   .header-create ul li h1 {
-    font-size: 0.7rem;
+    font-size: 1.1rem;
     width: 100%;
   }
-
-
-
 
   .sect-1-create ul li div {
     width: 100%;
   }
-
 
   .obs-tarefa textarea {
     height: 90px;
@@ -581,16 +570,30 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
+
   .header-create ul li img {
     width: 15%;
+  }
+
+  .header-create ul li {
+    width: auto;
+  }
+
+  .header-create ul li img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .header-create ul li h1 {
+    font-size: 1rem;
+    width: 100%;
   }
 }
 
 @media (max-width: 395px) {
-  .sect-2-create { 
+  .sect-2-create {
     display: block;
   }
-
 
   .sect-2-create ol select {
     margin-bottom: 150px;
@@ -602,18 +605,14 @@ footer a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
-  @media (max-width: 270px) {
-    .input-data-time section {
-      display: block;
-    }
+@media (max-width: 270px) {
+  .input-data-time section {
+    display: block;
+  }
 
-    .sect-1-create ul li div {
-      margin-left: 0;
-    }
-
-
-
+  .sect-1-create ul li div {
+    margin-left: 0;
+  }
 }
