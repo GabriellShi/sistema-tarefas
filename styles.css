@@ -397,12 +397,12 @@ footer a:hover {
 /* Estilização do Header Create Tarefa  */
 .header-create ul {
   width: 100%;
+  height: 3.2rem;
   display: flex;
   justify-content: space-around;
   text-align: center;
   align-items: center;
   margin-bottom: 2rem;
-  padding: 5px 0px;
   background-color: black;
   color: white;
 }
@@ -420,6 +420,10 @@ footer a:hover {
   font-size: 1.5rem;
 }
 
+.header-create ul li img {
+  height: 30px;
+  width: 30px;
+}
 /* Estilização do Body Create Tarefa  */
 
 .body-create form {
@@ -533,9 +537,7 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
-  .header-create ul {
-    height: 3rem;
-  }
+
 
   .body-create form {
     width: 80%;
@@ -571,18 +573,12 @@ footer a:hover {
 
 @media (max-width: 600px) {
 
-  .header-create ul li img {
-    width: 15%;
-  }
 
   .header-create ul li {
     width: auto;
   }
 
-  .header-create ul li img {
-    height: 25px;
-    width: 25px;
-  }
+
 
   .header-create ul li h1 {
     font-size: 1rem;
