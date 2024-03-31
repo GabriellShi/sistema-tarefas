@@ -76,7 +76,7 @@
 }
 
 .sect-1-index-son-left ol li div {
-  border: 2px solid black;
+  border: 3px solid rgb(0, 255, 81);
   width: 40%;
   height: 30px;
   margin-right: 10px;
@@ -189,6 +189,7 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .sect-2-index-grandSon1 {
@@ -236,6 +237,7 @@ a {
   border-radius: 15px;
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .sect-2-index-grandSon2 h4 {
@@ -470,7 +472,6 @@ footer a:hover {
   justify-content: center;
   margin-top: 7px;
   margin-bottom: 7px;
-
 }
 
 .sect-1-create ul li div input {
@@ -540,8 +541,6 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
-
-
   .body-create form {
     width: 80%;
     height: auto;
@@ -574,13 +573,9 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-
-
   .header-create ul li {
     width: auto;
   }
-
-
 
   .header-create ul li h1 {
     font-size: 1rem;
@@ -613,4 +608,141 @@ footer a:hover {
   .sect-1-create ul li div {
     margin-left: 0;
   }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------ESTILIZAÇÃO DO TAREFAS VIEWS  --------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.body-views {
+  background-image: url(img/background.jpg);
+  background-size: 100% auto;
+  font-size: 100%;
+}
+
+.sect-pai-views {
+  border:  2px solid red;
+  margin: 20px 100px;
+  height: 500px;
+  display: grid;
+
+}
+
+.body-views h2 {
+  text-align: center;
+  color: white;
+}
+
+.sect-1-views {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.sect-1-views div {
+  border: 2px solid rgb(255, 255, 255);
+  width: 70%;
+  height: 100px;
+  margin: auto;
+  padding: 0.8rem;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+}
+
+.sect-1-views h4 {
+  margin-bottom: 2rem;
+}
+
+.sect-2-views div {
+  border: 2px solid rgb(255, 255, 255);
+  width: 50%;
+  height: 100px;
+  margin: auto;
+  padding: 0.8rem;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+}
+
+
+
+
+@media (max-width: 1000px) {
+  .sect-1-views div {
+    width: 80%;
+  }
+
+  .sect-pai-views {
+    height: 650px;
+    margin-bottom: 2rem;
+  }
+  
+
+  .sect-2-views div {
+    width: 65%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .sect-pai-views {
+    margin: 20px 50px;
+
+  }
+  
+}
+
+
+
+@media (max-width: 571px) {
+
+  .sect-pai-views {
+    margin: 20px 20px;
+  }
+
+  .sect-1-views div {
+    width: 90%;  
+}
+
+.sect-2-views div {
+  width: 70%;
+  height: 100px;
+}
+
+.sect-1-views div {
+  margin-bottom: 40px;
+}
+
+}
+
+@media (max-width: 456px) {
+
+
+
+  .sect-1-views div {
+    width: 92%; 
+    height: 80px; 
+}
+
+.sect-1-views h4 {
+  margin-bottom: 1rem;
+}
+
+.sect-2-views div {
+  width: 75%;
+  height: 80px;
+}
+
+.sect-1-views div {
+  margin-bottom: 40px;
+}
+
+.body-views {
+  font-size: 80%;
+}
+
 }
