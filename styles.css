@@ -32,6 +32,10 @@
   color: white;
 }
 
+.header-index img {
+  width: 2rem;
+}
+
 .header-index a:hover {
   color: blue;
   cursor: pointer;
