@@ -541,6 +541,18 @@ footer a:hover {
 /* ------------------------------------------------------------ESTILIZAÇÃO DO TAREFAS CREATE RESPONSIVE --------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+
+@media (max-width: 940px) {
+  .sect-1-create {
+    margin-top: 15%;
+  }
+
+  .sect-1-pai-create {
+    height: 700px;
+  }
+}
+
+
 @media (max-width: 830px) {
   .header-create ul li h1 {
     font-size: 1.2rem;
@@ -556,6 +568,9 @@ footer a:hover {
     width: 100%;
     margin: 10px 0px 20px 0px;
   }
+
+
+
 }
 
 @media (max-width: 695px) {
@@ -575,6 +590,11 @@ footer a:hover {
   .obs-tarefa textarea {
     height: 90px;
   }
+
+  .sect-1-create {
+    margin-top: 25%;
+  }
+
 }
 
 @media (max-width: 600px) {
