@@ -18,7 +18,7 @@
   color: white;
   font-size: 1rem;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   padding: 5px 20px;
   align-items: center;
 }
@@ -135,6 +135,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
+  color: black;
 }
 
 .sect-1-index-grandSon2 h4 {
@@ -142,6 +143,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
 }
 
 /* Estilização da section 2 do index  */
@@ -193,15 +195,17 @@
 }
 
 .sect-2-index-grandSon1 {
-  background-color: rgb(56, 52, 52);
+  background-color: rgb(255, 0, 0);
 }
 
 .sect-2-index-grandSon1 h4 {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(135 134 134);
+  
 }
 
 .sect-2-index-grandSon1 a {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(135 134 134);
+  font-weight: bolder;
 }
 
 .sect-2-index-grandSon1 a:hover {
@@ -211,16 +215,16 @@
 }
 
 .sect-2-index-grandSon2 {
-  background-color: rgb(54, 56, 52);
+  background-color: rgb(44, 255, 2);
 }
 
 .sect-2-index-grandSon2 h4,
 a {
-  background-color: rgb(0, 255, 60);
+  background-color: rgb(135 134 134);
 }
 
 .sect-2-index-grandSon2 a:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(40, 51, 39);
   color: white;
   cursor: pointer;
 }
@@ -238,6 +242,7 @@ a {
   display: flex;
   align-items: center;
   color: black;
+  font-weight: bolder;
 }
 
 .sect-2-index-grandSon2 h4 {
