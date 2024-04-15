@@ -1,0 +1,239 @@
+<%- include("partials/head") %>
+
+<!-- Cabeçalho, onde tem o botão de sair, o titulo da tarefa e o botão de pausar -->
+
+<header class="header-create">
+    <ul>
+      <!-- botão de voltar ao inicio -->
+      <li>
+        <a href="/"
+          ><img src="./img/seta.png" alt="seta-voltar"
+        /></a>
+      </li>
+      <!-- Titulo da Pagina -->
+      <li><h1><%= detailsTarefas.nome_tarefa %></h1></li>
+
+      
+      <!-- botão que abre a opção dos tipos de criador de tarefas  -->
+      <li>
+        <img  src="./img/btn-pause.png" alt="icone-pausar" />
+      </li>
+    </ul>
+  </header>
+
+<body class="body-views">
+
+  <section class="sect-pai-views">
+    <!-- Cronômetro -->
+    <section class="cronometro">
+    <h2>Cronômetro</h2>
+        <h4>Tempo Restante: <span id="cronometro"><%= detailsTarefas.tempo %></span></h4>
+    </section>
+
+<!-- Botões de controle -->
+<section class="controls">
+
+  <form id="estadoForm" action="/<%= detailsTarefas.id %>/updateEstado?_method=PUT" method="POST">
+
+    <input type="hidden" id="estadoInput" name="estado" value="">
+    
+    <h2>Tarefa Atual</h2>
+    <p id="current-task">Nenhuma tarefa em andamento</p>
+    
+    
+    <!-- Adicionando onclick e preventDefault -->
+    <button type="button" id="startBtn" onclick="handleStartClick()">Iniciar Tarefa</button>
+    <button type="button" id="pauseBtn" onclick="handlePauseClick()">Pausar Tarefa</button>
+    
+
+    <button id="resumeBtn" style="display:none;">Retomar Tarefa</button>
+    <button id="progressBtn" style="display:none;">Tarefa em Progresso</button>
+  </form>
+    
+</section>
+
+
+<!-- Observações da tarefa e detalhes  -->
+    <section class="sect-2-views">
+        <h2>Observações da Tarefa:</h2>
+        <div><%= detailsTarefas.observacao %></div>
+    </section>
+</section>
+
+
+<!-- Script para o cronômetro e controle de botões -->
+<script>
+let tempoRestante = parseInt('<%= detailsTarefas.tempo %>', 10);
+let cronometro;
+let tempoPausado = 0; // Variável para armazenar o tempo pausado
+
+function updateTempoRestanteDB(tempoRestante) {
+    const id = parseInt('<%= detailsTarefas.id %>', 10);
+    
+    fetch(`/${id}/updateTempoRestante?_method=PUT`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ tempoRestante }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch((error) => console.error('Error:', error));
+}
+
+function updateCurrentTask(taskStatus) {
+    document.getElementById("current-task").innerText = taskStatus;
+}
+
+document.getElementById("startBtn").addEventListener("click", () => {
+    updateCurrentTask("Tarefa em andamento");
+
+    let tempoRestante = parseInt('<%= detailsTarefas.tempo %>', 10);
+    const hoursFromDB = Math.floor(tempoRestante / 3600);
+    const minutesFromDB = Math.floor((tempoRestante % 3600) / 60);
+    const tempoFormatadoFromDB = `${String(hoursFromDB).padStart(2, '0')}:${String(minutesFromDB).padStart(2, '0')}:${String(tempoRestante % 60).padStart(2, '0')}`;
+    
+    document.getElementById("cronometro").innerText = tempoFormatadoFromDB;
+
+    cronometro = setInterval(() => {
+        tempoRestante--;  // Decrementando o tempo restante
+
+        const hours = Math.floor(tempoRestante / 3600);
+        const minutes = Math.floor((tempoRestante % 3600) / 60);
+        const segundos = tempoRestante % 60;
+
+        const tempoFormatado = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+
+        document.getElementById("cronometro").innerText = tempoFormatado;
+
+        updateTempoRestanteDB(tempoRestante);
+
+        if (tempoRestante <= 0) {
+            clearInterval(cronometro);
+            alert("Tarefa concluída!");
+            updateCurrentTask("Nenhuma tarefa em andamento");
+        }
+    }, 1000); // Atualiza a cada segundo
+});
+
+
+
+
+
+document.getElementById("pauseBtn").addEventListener("click", async () => {
+    clearInterval(cronometro);
+    document.getElementById("pauseBtn").style.border = "";
+    document.getElementById("resumeBtn").style.display = "inline-block";
+    document.getElementById("progressBtn").style.display = "none";
+    
+    // Salvando o tempo restante quando pausamos
+    tempoPausado = tempoRestante;
+
+    await updateEstado("pausada", tempoRestante, () => {
+        console.log("Tempo pausado atualizado no banco de dados");
+    });
+});
+
+document.getElementById("resumeBtn").addEventListener("click", async (event) => {
+    event.preventDefault();  // Prevenindo o comportamento padrão do botão
+    
+    updateCurrentTask("Tarefa em andamento");
+
+    // Usando o tempo pausado para retomar
+    tempoRestante = tempoPausado;
+
+    const hoursFromDB = Math.floor(tempoRestante / 3600);
+    const minutesFromDB = Math.floor((tempoRestante % 3600) / 60);
+    const tempoFormatadoFromDB = `${String(hoursFromDB).padStart(2, '0')}:${String(minutesFromDB).padStart(2, '0')}:${String(tempoRestante % 60).padStart(2, '0')}`;
+    
+    document.getElementById("cronometro").innerText = tempoFormatadoFromDB;
+
+    clearInterval(cronometro);  // Limpando o intervalo anterior, se houver algum
+
+    cronometro = setInterval(async () => {
+        tempoRestante--;  // Decrementando o tempo restante
+
+        const hours = Math.floor(tempoRestante / 3600);
+        const minutes = Math.floor((tempoRestante % 3600) / 60);
+        const segundos = tempoRestante % 60;
+
+        const tempoFormatado = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+
+        document.getElementById("cronometro").innerText = tempoFormatado;
+
+        await updateTempoRestanteDB(tempoRestante, () => {
+            console.log("Tempo restante atualizado no banco de dados");
+        });
+
+        if (tempoRestante <= 0) {
+            clearInterval(cronometro);
+            alert("Tarefa concluída!");
+            updateCurrentTask("Nenhuma tarefa em andamento");
+        }
+    }, 1000); // Atualiza a cada segundo
+});
+
+
+
+
+
+
+function handleStartClick() {
+    updateEstado("iniciada", tempoRestante);
+}
+
+function handlePauseClick() {
+    updateEstado("pausada", tempoRestante);
+}
+
+async function updateEstado(estado, tempoRestante, callback) {
+    const id = parseInt('<%= detailsTarefas.id %>', 10);
+
+    try {
+        const response = await fetch(`/${id}/updateEstado?_method=PUT`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ estado, tempoRestante }),
+        });
+
+        const data = await response.json();
+        console.log(data);
+        document.getElementById("estadoInput").value = estado;
+        if (callback) callback();
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function updateTempoRestanteDB(tempoRestante, callback) {
+    const id = parseInt('<%= detailsTarefas.id %>', 10);
+
+    try {
+        const response = await fetch(`/${id}/updateTempoRestante?_method=PUT`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ tempoRestante }),
+        });
+
+        const data = await response.json();
+        console.log(data);
+        if (callback) callback();
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+
+</script>
+
+
+
+</body>
+</html>

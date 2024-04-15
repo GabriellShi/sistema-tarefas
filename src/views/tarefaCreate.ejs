@@ -1,0 +1,110 @@
+<%- include("partials/head") %>
+
+  <header class="header-create">
+    <ul>
+      <!-- botão de voltar ao inicio -->
+      <li>
+        <a href="/"
+          ><img width="10%" src="./img/home.png" alt="icone-home"
+        /></a>
+      </li>
+      <!-- Titulo da Pagina -->
+      <li><h1>CRIAÇÃO DE CONTEUDO</h1></li>
+      <!-- botão que abre a opção dos tipos de criador de tarefas  -->
+      <li>
+        <img width="10%" src="./img/categoria.png" alt="icone-categoria" />
+      </li>
+    </ul>
+  </header>
+  <body class="body-create">
+    <!-- Formulario de criação de Tarefas  -->
+    <form action="/create" method="post" enctype="application/x-www-form-urlencoded">
+
+
+    <section class="sect-1-pai-create">
+      <section class="sect-1-create">
+        <ul>
+          <!-- Campo onde vai o nome da Tarefa -->
+          <li>
+            <div>
+              <label for="nome_tarefa">Nome da Tarefa</label>
+              <input
+                type="text"
+                name="nome_tarefa"
+                placeholder="Nome da Tarefa"
+              />
+            </div>
+          </li>
+          <!-- Campo onde vai a Data da tarefa e o Tempo da tarefa  -->
+          <li>
+            <div class="input-data-time">
+              <section>
+                <div class="data1">
+                  <label for="data-tarefa">Data</label>
+                  <input
+                    type="date"
+                    name="data"
+                    placeholder="Data da Tarefa"
+                  />
+                </div>
+                <div class="time1">
+                  <label for="tempo-tarefa">Tempo</label>
+                  <input
+                    type="time"
+                    name="tempo"
+                    placeholder="Tempo da Tarefa"
+                  />
+                </div>
+              </section>
+            </div>
+          </li>
+          <!-- Campo onde vai as obervações relacionadas a essa tarefa  -->
+          <li>
+            <div class="obs-tarefa">
+              <div><label for="obd-tarefa">Observação da Tarefa</label></div>
+              <div>
+                <textarea
+                  name="observacao"
+                  placeholder="Observação da Tarefa"
+                  rows="7"
+                  cols="65"
+                ></textarea>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+       
+      </section>
+
+      <section class="sect-2-create">
+        <!-- Seção onde ira selecionar a Prioridade da tarefa, entre Normal, Alto, Urgente e Pode Esperar  -->
+        <ol>
+            <select name="prioridade" >
+                <option value="" disabled selected style="display: none;">Prioridade</option>
+            
+                <option value="podeEsperar" style="background-color: blue;">Pode Esperar</option>
+                <option value="normal" style="background-color: gray;">Normal</option>
+                <option value="alto" style="background-color: orange;">Alto</option>
+                <option value="urgente" style="background-color: red;">Urgente</option>
+            </select>
+        </ol>
+
+        <!-- Seleção se sera uma tarefa recorrente ou não -->
+        <ol>
+          <select name="recorrente">
+            <option value="" disabled selected style="display: none;">Recorrente?</option>
+            <option value="sim" style="background-color: gray;">Sim</option>
+            <option value="nao" style="background-color: gray;">Não</option>
+          </select>
+        </ol>
+
+
+      </section>
+      <button type="submit">Criar Tarefa </button>
+
+    </section>
+
+    </form>
+  </body>
+</html>
